@@ -6,7 +6,7 @@
 {% for product in products%}
 <h2>{{ product.name }}</h2>
 <img src="{{ product.thumbnail.url }}" alt="{{ product.name }}" style = "max-width:250px;">
-
+<a href="{% url 'product' product.slug %}">voir l'article</a>
 
 
 {% endfor %}
