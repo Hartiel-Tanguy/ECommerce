@@ -12,11 +12,15 @@
         <h1>La boutique</h1>
     </a>
 
-    {% if not user.is_authenticated %}
-
+    {% if  user.is_authenticated %}
+        {{ user.username }} 
+        <a href="{% url 'logout'%}">Déconnexion</a> 
+    {% else %}
+    <a href="{% url 'login'%}">Connexion</a>
     <a href="{% url 'signup'%}">S'inscrire</a>
 
     {% endif %}
+
     {% block content %}
    
 
