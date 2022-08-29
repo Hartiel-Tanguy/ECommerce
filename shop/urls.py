@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from store.views import index
-from store.views import product_detail, add_to_cart
+from store.views import product_detail, add_to_cart, cart
 from shop import settings
 from accounts.views import signup
 from accounts.views import logout_user
 from accounts.views import login_user
+
+
 
 
 urlpatterns = [
@@ -32,6 +34,7 @@ urlpatterns = [
     path('signup/', signup, name='signup'),
     path('logout/', logout_user , name='logout'),
     path('login/', login_user , name='login'),
+    path('cart/', cart, name='cart'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
