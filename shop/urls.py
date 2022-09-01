@@ -26,6 +26,7 @@ from accounts.views import login_user
 
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
@@ -37,5 +38,6 @@ urlpatterns = [
     path('cart/', cart, name='cart'),
     path('cart/delete/', delete_cart, name='delete-cart'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 
 

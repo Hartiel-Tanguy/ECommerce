@@ -43,3 +43,7 @@ def delete_cart(request):
     return redirect("index")
 
 
+
+
+
+

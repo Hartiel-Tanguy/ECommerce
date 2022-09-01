@@ -47,4 +47,5 @@ class Cart(models.Model):
             order.save()
         self.orders.clear()
         super().delete(*args, **kwargs)
+        
     
