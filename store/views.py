@@ -1,6 +1,8 @@
 from django.urls import reverse
 from django.shortcuts import render,redirect, get_object_or_404
+from shop import settings
 from store.models import Cart, Order, Product
+
 
 
 
@@ -39,3 +41,5 @@ def delete_cart(request):
     if cart := request.user.cart:
         cart.delete()
     return redirect("index")
+
+
