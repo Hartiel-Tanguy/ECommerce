@@ -41,9 +41,3 @@ def delete_cart(request):
     if cart := request.user.cart:
         cart.delete()
     return redirect("index")
-
-
-
-
-
-
